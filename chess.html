@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="made by 唐海潇" />
+    <title>chess</title>
+    <link rel="stylesheet" href="chess.css">
+    <script src="vue.min.js"></script>
+</head>
+<body>
+    <div class="chessboard" id="chessboard">
+        <div class="info">
+            本轮：
+            <span v-if="index%2 !== 0"><div class="black"></div>黑</span>
+            <span v-if="index%2 === 0"><div class="white"></div>白</span>
+
+            <span class="blackNum">黑棋：{{blackNum}}</span>
+            <span class="whiteNum">白棋：{{whiteNum}}</span>
+
+            <button @click="restart">重新开始</button>
+        </div>
+        <table border="1">
+            <tr v-for="(items,row) in chessboardShow">
+                <td v-for="(item,col) in items" :class="{'canplay': item === 2}" :rowIndex = "row" :colIndex = "col" @click="playing(row,col)">
+                    <div class="chessman":class="{'white': item === 1, 'black': item === -1}"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="chess.js"></script>
+</body>
+</html>

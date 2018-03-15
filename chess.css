@@ -1,0 +1,53 @@
+.info{
+    width: 640px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.info span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.info span div{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.info span div.black{
+    background: #000;
+}
+.info span div.white{
+    background: #ddd;
+}
+.info .blackNum{
+    margin-left: 100px;
+}
+.info .whiteNum{
+    margin-left: 50px;
+    margin-right: 100px;
+}
+.chessboard table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.chessboard table td{
+    width: 60px;
+    height: 60px;
+    padding: 10px
+}
+.chessman{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.chessman.black{
+    background: #000;
+}
+.chessman.white{
+    background: #ddd;
+}
+.chessboard table td.canplay{
+    background: #b5eff9;
+}
